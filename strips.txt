@@ -1,0 +1,77 @@
+
+aws glue start-job-run --job-name de-c4w4a1-api-users-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a1-api-sessions-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a1-rds-extract-job | jq -r '.JobRunId'
+
+aws glue get-job-run --job-name de-c4w4a1-api-users-extract-job --run-id jr_3e2d788d279df363004137545476be512c8dba11ab66c5dea589f23f3fcae99a --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-api-sessions-extract-job --run-id jr_0e4d9ec88084b9f0d558228863442022e5fd4e9ca64cdbc243243d5747052e91 --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-rds-extract-job --run-id jr_ad4a90862197e19dd4784022161f63531d20e743fa55a8f972431b48285769d3 --output text --query "JobRun.JobRunState"
+
+
+
+
+
+aws glue get-job-run --job-name de-c4w4a1-api-users-extract-job --run-id jr_3423293504a6bd81b65475db2672a283951da3e93f899f592ab99a0773df506d --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-api-sessions-extract-job --run-id jr_3d3bbfb210800166fefbaccc165d020b793f81ae6ec729b1c0f693c7c825235c --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-rds-extract-job --run-id jr_17896f4261af24ff4fb095877b11cfd10204b675b1ed7d255d2855bd6a605717 --output text --query "JobRun.JobRunState"
+
+ (de-c4w4a1-json-transform-job or de-c4w4a1-songs-transform-job)
+ 
+aws glue start-job-run --job-name de-c4w4a1-json-transform-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a1-songs-transform-job | jq -r '.JobRunId'
+
+aws glue get-job-run --job-name de-c4w4a1-json-transform-job --run-id jr_4d947afb4007f808a166f55c38df5132416d0efc0ac8d81159752eeab142876e --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-songs-transform-job --run-id jr_da5ac9d8b2f21239ab07e81bff93a6a440cb112cd14654346d12baa2444dfd0a --output text --query "JobRun.JobRunState"
+
+
+
+
+aws glue start-job-run --job-name de-c4w4a1-api-users-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a1-api-sessions-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a1-rds-extract-job | jq -r '.JobRunId'
+
+aws glue get-job-run --job-name de-c4w4a1-api-users-extract-job --run-id jr_ae6b68b58288c8c58470b15b5055468963bccc090f57f1fb76593d677bc26ff9 --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-api-sessions-extract-job --run-id jr_df18c25765aadff836a4db4968d13d222f19375e2b6ee16f68cfced6786c4bde --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a1-rds-extract-job --run-id jr_7b93ed2e585337acb7f7eefe97591c76c74ab3f4f122dc6ea5613699250f6a98 --output text --query "JobRun.JobRunState"
+
+
+
+REDSHIFTDBHOST = 'de-c4w4a1-redshift-cluster.cbkcsnzvvqw5.us-east-1.redshift.amazonaws.com'
+REDSHIFTDBPORT = 5439
+REDSHIFTDBNAME = 'dev'
+REDSHIFTDBUSER = 'defaultuser'
+REDSHIFTDBPASSWORD = 'Defaultuserpwrd1234+'
+
+
+aws glue start-job-run --job-name de-c4w4a2-api-users-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a2-api-sessions-extract-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a2-rds-extract-job | jq -r '.JobRunId'
+
+aws glue get-job-run --job-name de-c4w4a2-api-users-extract-job --run-id jr_a9ae043dbf41965b76f649c06335bba794166e9d8f0b98667526f7d6aa1f7912 --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a2-api-sessions-extract-job --run-id jr_7e5f80208d1bcae09cfb3acaa50510d4325320c360e4c3c2b7a93b121e953097 --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a2-rds-extract-job --run-id jr_1a08e6d4b914f3f890b7d4d752fbf83233a574db7324a637b0417871c698434d --output text --query "JobRun.JobRunState"
+
+
+
+aws glue start-job-run --job-name de-c4w4a2-json-transform-job | jq -r '.JobRunId'
+aws glue start-job-run --job-name de-c4w4a2-songs-transform-job | jq -r '.JobRunId'
+
+aws glue get-job-run --job-name de-c4w4a2-json-transform-job --run-id jr_e55dfde0cc79e00429fb671d85b746dee40b4b7e47ebe514ff0af97c4b1dc4c9 --output text --query "JobRun.JobRunState"
+aws glue get-job-run --job-name de-c4w4a2-songs-transform-job --run-id jr_5a46570032ec72692f2828b25f8b44b034161931639d39ba24e7106f35b5d15e --output text --query "JobRun.JobRunState"
+
+
+
+aws s3 cp $HOME/workspace/dbt_modeling/models/bi_views s3://de-c4w4a2-715231049228-us-east-1-dbt/dbt_project/dbt_modeling/models/bi_views --recursive
+
+aws s3 cp $HOME/workspace/dbt_modeling/dbt_project.yml s3://de-c4w4a2-715231049228-us-east-1-dbt/dbt_project/dbt_modeling/dbt_project.yml
+
+
+aws s3 cp $HOME/workspace/dags/deftunes_songs_pipeline.py s3://de-c4w4a2-715231049228-us-east-1-dags/dags/deftunes_songs_pipeline.py
+
+
+aws s3 cp $HOME/workspace/dags/deftunes_api_pipeline.py s3://de-c4w4a2-715231049228-us-east-1-dags/dags/deftunes_api_pipeline.py
+
+
+
+
+
